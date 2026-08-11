@@ -27,6 +27,7 @@ class DragonModel(BaseModel):
     shotlimit: int 
     venom: int
     jawstrength: int
+    stealth: int
     created_at: datetime
     updated_at: datetime
     dragon_class: Optional[DragonClassModel] = None
@@ -53,6 +54,7 @@ class DragonCreateModel(BaseModel):
     shotlimit: int 
     venom: int
     jawstrength: int
+    stealth: int
     class_uid: Optional[uuid.UUID] = None
     abilities: List[uuid.UUID] = Field(default_factory=list)
     distributions: List[uuid.UUID] = Field(default_factory=list)
@@ -80,6 +82,7 @@ class DragonUpdateModel(BaseModel):
     shotlimit: Optional[int] = None
     venom: Optional[int] = None
     jawstrength: Optional[int] = None
+    stealth: Optional[int] = None
     class_uid: Optional[uuid.UUID] = None
     ability_uids_add: List[uuid.UUID] = Field(default_factory=list)
     ability_uids_remove: List[uuid.UUID] = Field(default_factory=list)

@@ -149,6 +149,7 @@ class Dragon(SQLModel, table=True):
     shotlimit: int 
     venom: int 
     jawstrength: int 
+    stealth: int
 
     class_uid: Optional[uuid.UUID] = Field(default=None, foreign_key="classes.uid")
     

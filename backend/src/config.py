@@ -24,4 +24,10 @@ class Settings(BaseSettings):
     DOMAIN_FRONTEND: str
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
+
 Config = Settings()
+
+
+broker_url = Config.CELERY_BROKER_URL
+result_backend = Config.CELERY_RESULT_BACKEND
+broker_connection_retry_on_startup = True

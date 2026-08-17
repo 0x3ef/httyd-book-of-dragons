@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { DragonGallery } from '../components/dragons/DragonGallery';
 import { DragonStats } from '../components/dragons/DragonStats';
-import { DragonFisicalFeactures } from '../components/dragons/DragonFisicalFeactures';
+import { DragonPhysicalFeatures } from '../components/dragons/DragonPhysicalFeatures';
 import { DragonEcologyBehavior } from '../components/dragons/DragonEcologyBehavior';
 import { useDragon } from '../hooks/dragons/useDragon';
 
@@ -73,7 +73,7 @@ export function DragonDetail() {
                             </span>
                         </div>
                     </div>
-                    <DragonFisicalFeactures dragon={dragon} />
+                    <DragonPhysicalFeatures dragon={dragon} />
                     <DragonEcologyBehavior dragon={dragon} />
                 </div>
 

@@ -71,7 +71,7 @@ async def create_dragon(
     session: AsyncSession = Depends(get_session)
 ) -> DragonModel:
     dragon = await dragons_service.get_dragon_by_species(dragon_data.species, session) 
-    if dragon:
+    if not dragon:
         return await dragons_service.create_dragon(dragon_data, session)
     else: 
         raise DragonAlreadyExists() 
